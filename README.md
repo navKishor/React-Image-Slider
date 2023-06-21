@@ -1,3 +1,5 @@
+Project - Image carousel : crete a react component that display a carousel of images, include fetures like automatic image rotation , navigaton button, and responsive design.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

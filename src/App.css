@@ -1,38 +1,82 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.app {
   text-align: center;
+  background-image: url(https://img.freepik.com/free-photo/top-view-blooming-flowers_23-2148882253.jpg?w=2000);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.caraosal {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100vw;
 }
 
-.App-link {
-  color: #61dafb;
+.image-carousel {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.image-carousel img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  border-radius: 2%;
+  cursor: pointer;
+
+}
+
+@media screen and (max-width: 720px) {
+  h1 {
+    font-size: 2.5rem !important;
   }
-  to {
-    transform: rotate(360deg);
+  .image-carousel {
+    width: 100vw !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    object-fit: contain;
+  }
+  .image-carousel img {
+    display: block;
+    width: auto;
+    height: 70vh;
+    border-radius: 2%;
+    cursor: pointer;
+  
+  }
+}
+
+
+
+.carousel-buttons {
+  margin-top: 10px;
+}
+
+button {
+  height: 4rem;
+  color: white;
+  padding: auto;
+  margin: auto 2rem;
+
+}
+.carousel-buttons button {
+  margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+  .image-carousel {
+    max-width: 400px;
   }
 }
