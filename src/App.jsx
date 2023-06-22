@@ -15,7 +15,9 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>React Image Slider</h1>
+      <div class="four">
+      <h1><span>Beautiful Slides</span> React <em>Image</em> Slider</h1>
+    </div>
       <ImageCarousel images={images} />
       </div>
   );

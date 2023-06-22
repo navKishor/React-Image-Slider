@@ -2,29 +2,25 @@ import { useEffect, useState } from "react";
 
 const ImageCarousel = ({ images }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+    const lastIndex = images.length - 1;
     useEffect(() => {
       // Automatically rotate images every 3 seconds
-      const interval = setInterval(() => {
-        setCurrentImageIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        setInterval(() => {
+        setCurrentImageIndex((current) =>
+          current === lastIndex ? 0 : current + 1
         );
-      }, 3000);
-  
-      return () => {
-        clearInterval(interval);
-      };
-    }, [images.length]);
+      }, 3000);  
+    }, []);
   
     const goToPreviousImage = () => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      setCurrentImageIndex((current) =>
+        current === 0 ? lastIndex : current - 1
       );
     };
   
     const goToNextImage = () => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      setCurrentImageIndex((current) =>
+        current === lastIndex ? 0 : current + 1
       );
     };
   
